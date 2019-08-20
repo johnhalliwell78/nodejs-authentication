@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1 Log In
+    p Please log in using your information below
+    form(method='post', action='/users/login', enctype='multipart/form-data')
+        .form-group
+            label Username
+            input.form-control(name='username', type='text', placeholder='Enter Your Username')
+        .form-group
+            label Password
+            input.form-control(name='password', type='password', placeholder='Enter Your Password')
+        input.btn.btn-primary(name='submit', type='submit', value='Login')
